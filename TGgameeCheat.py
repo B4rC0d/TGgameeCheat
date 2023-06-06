@@ -27,10 +27,10 @@ session.headers = {
 }
 #===============================================================
 
-Game_Url = input("FoxCheat\033[2;31;5m( GameUrl )\033[0;m > \033[96m")
+Game_Url = input("\033[0mFoxCheat\033[2;31;5m( GameUrl )\033[0;m > \033[96m")
 
 Game_Hash = ((Game_Url.split("#")[0]).split("/")[3:])[1]
-print(Game_Hash)
+
 #===============================================================
 data =  session.post("https://api.service.gameeapp.com/" , json={
         "jsonrpc":"2.0",
@@ -75,7 +75,7 @@ session.headers = {
 time = data['time']
 playtime = random.randint(300,2000)
 
-score = input("FoxCheat\033[2;31;5m( YourScore )\033[0;m > \033[96m")
+score = input("\033[0mFoxCheat\033[2;31;5m( YourScore )\033[0;m > \033[96m")
 gameStateData = ''
 
 with open("nmd5.js" , "w+") as file:
