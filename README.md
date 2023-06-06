@@ -30,5 +30,5 @@ npm install md5
 ```
 Run
 ```
-python3 foxfollower.py
+python3 TGgameeCheat.py
 ```
