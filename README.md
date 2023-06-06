@@ -1,11 +1,6 @@
 # TGgameeCheat
 
-Gamee telegram robot games cheat(Edited)Restore original
-
-*Things that must be observed !!!*
-
-   - Login with an account to send followers
-   - Avoid sending more than 20 followers as it will disable your Instagram account
+Gamee telegram robot games cheat
 
 # Installation
 
