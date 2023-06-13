@@ -5,11 +5,11 @@ Gamee telegram robot games cheat
 # Installation
 
 ```
-git clone https://github.com/BlackFoxTM/FoxFollower.git
+git clone https://github.com/B4rC0d/TGgameeCheat.git
 ```
 Go to the directory
 ```
-cd FoxFollower
+cd TGgameeCheat
 ```
 Install NodeJS(arch)
 ```
