@@ -11,17 +11,10 @@ Go to the directory
 ```
 cd TGgameeCheat
 ```
-Install NodeJS(arch)
+
+Install library
 ```
-sudo pacman -S nodejs
-```
-Install NodeJS(debian)
-```
-sudo apt install nodejs
-```
-Installing Node JS library
-```
-npm install md5
+pip install hashlib requests
 ```
 Run
 ```
