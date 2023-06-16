@@ -1,6 +1,6 @@
-import requests , random , subprocess
+import requests , random 
 from os import name , system 
-
+from hashlib import md5
 
 if name == 'nt':
     system('cls') # Cleaning the terminal in Windows
@@ -10,7 +10,7 @@ elif name == 'posix':
 print("""
 ⢿⣿⣿⣿⣭⠹⠛⠛⠛⢿⣿⣿⣿⣿⡿⣿⠷⠶⠿⢻⣿⣛⣦⣙⠻⣿
 ⣿⣿⢿⣿⠏⠀⠀⡀⠀⠈⣿⢛⣽⣜⠯⣽⠀⠀⠀⠀⠙⢿⣷⣻⡀⢿      \033[32m# \033[93mTG Gamee Cheat\033[0m
-⠐⠛⢿⣾⣖⣤⡀⠀⢀⡰⠿⢷⣶⣿⡇⠻⣖⣒⣒⣶⣿⣿⡟⢙⣶⣮      \033[32m# \033[93mCoded By \033[91mB4rC0d\033[0m
+⠐⠛⢿⣾⣖⣤⡀⠀⢀⡰⠿⢷⣶⣿⡇⠻⣖⣒⣒⣶⣿⣿⡟⢙⣶⣮      \033[32m# \033[9a3mCoded By \033[91mB4rC0d\033[0m
 ⣤⠀⠀⠛⠻⠗⠿⠿⣯⡆⣿⣛⣿⡿⠿⠮⡶⠼⠟⠙⠊⠁⠀⠸⢣⣿      \033[32m# \033[93mChannel \033[32m: \033[91m@BlackFoxSecurityTeam\033[0m
 ⣿⣷⡀⠀⠀⠀⠀⠠⠭⣍⡉⢩⣥⡤⠥⣤⡶⣒⠀⠀⠀⠀⠀⢰⣿⣿
 ⣿⣿⡽⡄⠀⠀⠀⢿⣿⣆⣿⣧⢡⣾⣿⡇⣾⣿⡇⠀⠀⠀⠀⣿⡇⠃
@@ -78,17 +78,8 @@ playtime = random.randint(300,2000)
 score = input("\033[0mFoxCheat\033[2;31;5m( YourScore )\033[0;m > \033[96m")
 gameStateData = ''
 
-with open("nmd5.js" , "w+") as file:
-    file.write('var md5 = require("md5");\nvar score ='+str(score)+' ;\nvar playTime ='+str(playtime)+' ;\nvar url = "/game-bot/'+f'{Game_Hash}"'+';\nvar gameStateData = \''+gameStateData+'\';\nconsole.log(md5(`${score}:${playTime}:${url}:${gameStateData}:crmjbjm3lczhlgnek9uaxz2l9svlfjw14npauhen`));')
 
-
-
-proc = subprocess.Popen('node nmd5.js', stdout=subprocess.PIPE, shell=True)
-(Hash, err) = proc.communicate()
-
-
-
-hashs1 = Hash.decode().replace("\n","")
+hashs1 =  md5(f'{str(score)}:{str(playtime)}:/game-bot/{Game_Hash}:{gameStateData}:crmjbjm3lczhlgnek9uaxz2l9svlfjw14npauhen'.encode()).hexdigest()
 
 
 
